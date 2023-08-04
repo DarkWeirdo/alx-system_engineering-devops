@@ -1,2 +1,2 @@
 #!/bin/bash
-paste <(chmod 751 hello)
+paste <(chmod 777 hello)
