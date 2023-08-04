@@ -1,0 +1,2 @@
+#!/bin/bash
+paste <(chmod 764 hello)
