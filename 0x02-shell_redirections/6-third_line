@@ -1,2 +1,2 @@
 #!/bin/bash
-paste <(grep -n 3 iacta)
+paste <(grep -n 2 iacta)
