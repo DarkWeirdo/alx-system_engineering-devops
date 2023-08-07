@@ -1,2 +1,2 @@
 #!/bin/bash
-paste <(tail -n 1 iacta >> iacata)
+paste <(tail -n 1 iacta >> iacta)
