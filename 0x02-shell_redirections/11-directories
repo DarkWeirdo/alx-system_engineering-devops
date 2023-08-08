@@ -1,2 +1,2 @@
 #!/bin/bash
-paste <(find . mindepth 1 -type d -print | wc -l )
+find . mindepth 1 -type d -name ".*" | wc -l
