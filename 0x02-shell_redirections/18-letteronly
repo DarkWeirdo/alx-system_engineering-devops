@@ -1,2 +1,2 @@
 #!/bin/bash
-paste <(grep '^[[::upper::]]\|^[[::lower]]' /etc/ssh/sshd_config)
+paste <(grep '^[[::upper::]]\|^[[::lower::]]' /etc/ssh/sshd_config)
