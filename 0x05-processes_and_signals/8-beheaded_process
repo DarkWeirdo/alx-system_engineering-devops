@@ -1,12 +1,3 @@
 #!/usr/bin/env bash
-# This script kills a certain bash script process that traps SIGTERM signals
-
-# Use pgrep to find the PIDs of processes containing 'bash'
-pids=$(pgrep -f 7-highlander)
-
-# Loop through each PID
-for pid in $pids; do
-    # Use pkill to send a SIGKILL signal to the process
-    pkill -SIGKILL -P "$pid"
-done
-
+# This script stops the 7-highlander process
+pkill -SIGKILL -f "7-highlander"
