@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # This script lists the PID and process name of processes whose name contains the word "bash"
 for pid in /proc/*; do
-    if [[ -d "$pid" && -n $(grep -l "bash" "$pid/cmdline") ]]; then
+    if [[ -d "$pid" ]] && grep -q "bash" "$pid/cmdline"; then
         echo "$pid" "$(cat "$pid/comm")"
     fi
 done
