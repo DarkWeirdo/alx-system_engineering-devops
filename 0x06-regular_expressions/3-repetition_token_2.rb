@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 def match_pattern(arg)
- regex = /hbt{1,4}n/
+ regex = /hbt{1,}n/
  matches = arg.scan(regex)
  puts matches.join
 end
