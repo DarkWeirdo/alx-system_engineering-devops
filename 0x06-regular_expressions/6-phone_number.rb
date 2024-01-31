@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 def match_pattern(arg)
- regex = /\d{10}/
+ regex = /^\d{10}$/
  matches = arg.scan(regex)
  puts matches.join
 end
