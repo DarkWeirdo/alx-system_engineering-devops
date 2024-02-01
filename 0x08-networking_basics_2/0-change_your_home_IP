@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# This script modifies the /etc/hosts file to set custom DNS entries for localhost and facebook.com
+
+# Backup the original hosts file
+sudo cp /etc/hosts /etc/hosts.backup
+
+# Use sed to modify the hosts file in place, avoiding the 'Cannot rename' error mentioned in the blog post
+sudo sed -i '/^127\.0\.0\.1\s*localhost/c\127.0.0.2\tlocalhost' /etc/hosts
+echo '127.0.0.2 localhost' | sudo tee -a /etc/hosts > /dev/null
+
+sudo sed -i '/^8\.8\.8\.8\s*facebook\.com/! s/^.*facebook\.com.*/8.8.8.8\tfacebook.com/' /etc/hosts
+echo '8.8.8.8 facebook.com' | sudo tee -a /etc/hosts > /dev/null
+
+# Flush the DNS cache to ensure the changes take effect immediately
+sudo systemd-resolve --flush-caches
+
+echo "DNS settings have been updated successfully."
