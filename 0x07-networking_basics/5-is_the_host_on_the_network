@@ -2,8 +2,7 @@
 # This script pings an IP address passed as an argument
 
 if [[ $# -eq 0 ]]; then
-    # Use basename to remove any directory paths from $BASH_SOURCE
-    echo "Usage: $(basename "$BASH_SOURCE") {IP_ADDRESS}"
+    echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
     exit 1
 fi
 
