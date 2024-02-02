@@ -2,7 +2,9 @@
 # This script pings an IP address passed as an argument
 
 if [[ $# -eq 0 ]]; then
-    echo "Usage: $0 {IP_ADDRESS}"
+    # Extract the script name without the path and without the extension
+    SCRIPT_NAME=$(basename "$BASH_SOURCE")
+    echo "Usage: $SCRIPT_NAME {IP_ADDRESS}"
     exit 1
 fi
 
